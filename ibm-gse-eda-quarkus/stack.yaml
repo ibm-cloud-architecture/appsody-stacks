@@ -1,0 +1,12 @@
+name: IBM_GSE_EDA_Quarkus
+version: 0.4.1
+description: Quarkus 1.5.3 runtime for running Java applications
+license: Apache-2.0
+language: java
+maintainers:
+  - name: jerome boyer
+    email: boyerje@us.ibm.com
+    githuo-id: jbcodeforce
+default-template: kafka
+requirements:
+   appsody-version: ">= 0.6.0"
