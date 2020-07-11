@@ -1,14 +1,21 @@
-# appsody-stacks
+# IBM Cloud Architecture Appsody incubator stacks
 
-Some appsody stacks as update of the incubator ones or new ones.
 
-## To get those stacks
+## To get access to those stacks
 
-* Clone the repository
-* package the stack: in each folders do a `appsody stack package`
-* List the stack: `appsody list`
+Add a new repository into your local environment by using the command
 
-## Create projects
+```shell
+appsody repo add ibmcase https://raw.githubusercontent.com/ibm-cloud-architecture/appsody-stacks/master/ibmcase-index.yaml
 
-* Kafka quarkus reactive messaging basic: `appsody init dev.local/ibm-gse-eda-quarkus`
-* Quakrkus basic: `dev.local/ibm-gse-eda-quarkus default` 
+# Verify the repository 
+appsody list
+# you should see template like
+REPO        	ID                            	VERSION  	TEMPLATES               	DESCRIPTION  
+ibmcase     	ibm-gse-eda-quarkus           	0.4.1    	default, *kafka         	Quarkus 1.5.3 runtime for running Java applications     
+```
+
+## Create a project
+
+* For Kafka quarkus reactive messaging basic: `appsody init ibmcase/ibm-gse-eda-quarkus`
+* Quarkus basic: `appsody init ibmcase/ibm-gse-eda-quarkus default` 

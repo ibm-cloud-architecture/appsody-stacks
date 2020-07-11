@@ -11,12 +11,12 @@ stacks:
     email: boyerje@us.ibm.com
     github-id: ""
   default-template: kafka
-  src: https://github.com/ibm-cloud-architecture/appsody-stacks/releases/latest/download/ibm-gse-eda-quarkus.v0.4.1.source.tar.gz
+  src: https://github.com/ibm-cloud-architecture/appsody-stacks/releases/download/0.4.1/ibm-gse-eda-quarkus.v0.4.1.source.tar.gz
   templates:
   - id: default
-    url: https://github.com/ibm-cloud-architecture/appsody-stacks/releases/latest/download/ibm-gse-eda-quarkus.v0.4.1.templates.default.tar.gz
+    url: https://github.com/ibm-cloud-architecture/appsody-stacks/releases/download/0.4.1/ibm-gse-eda-quarkus.v0.4.1.templates.default.tar.gz
   - id: kafka
-    url: https://github.com/ibm-cloud-architecture/appsody-stacks/releases/latest/download/ibm-gse-eda-quarkus.v0.4.1.templates.kafka.tar.gz
+    url: https://github.com/ibm-cloud-architecture/appsody-stacks/releases/download/0.4.1/ibm-gse-eda-quarkus.v0.4.1.templates.kafka.tar.gz
   requirements:
     appsody-version: '>= 0.6.0'
-  image: dev.local/appsody/ibm-gse-eda-quarkus:0.4.1
+  image: ibmcase/ibm-gse-eda-quarkus:0.4.1
