@@ -1,0 +1,24 @@
+[
+	{
+		"displayName": "Ibmcase IBM_GSE_EDA_Quarkus default template",
+		"description": "Quarkus 1.5.3 runtime for running Java applications",
+		"language": "java",
+		"projectType": "appsodyExtension",
+		"projectStyle": "Appsody",
+		"location": "https://github.com/ibm-cloud-architecture/appsody-stacks/releases/latest/download/ibm-gse-eda-quarkus.v0.4.1.templates.default.tar.gz",
+		"links": {
+			"self": "/devfiles/ibm-gse-eda-quarkus/devfile.yaml"
+		}
+	},
+	{
+		"displayName": "Ibmcase IBM_GSE_EDA_Quarkus kafka template",
+		"description": "Quarkus 1.5.3 runtime for running Java applications",
+		"language": "java",
+		"projectType": "appsodyExtension",
+		"projectStyle": "Appsody",
+		"location": "https://github.com/ibm-cloud-architecture/appsody-stacks/releases/latest/download/ibm-gse-eda-quarkus.v0.4.1.templates.kafka.tar.gz",
+		"links": {
+			"self": "/devfiles/ibm-gse-eda-quarkus/devfile.yaml"
+		}
+	}
+]

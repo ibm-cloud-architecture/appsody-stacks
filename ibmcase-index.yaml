@@ -1,0 +1,22 @@
+apiVersion: v2
+stacks:
+- id: ibm-gse-eda-quarkus
+  name: IBM_GSE_EDA_Quarkus
+  version: 0.4.1
+  description: Quarkus 1.5.3 runtime for running Java applications
+  license: Apache-2.0
+  language: java
+  maintainers:
+  - name: jerome boyer
+    email: boyerje@us.ibm.com
+    github-id: ""
+  default-template: kafka
+  src: https://github.com/ibm-cloud-architecture/appsody-stacks/releases/latest/download/ibm-gse-eda-quarkus.v0.4.1.source.tar.gz
+  templates:
+  - id: default
+    url: https://github.com/ibm-cloud-architecture/appsody-stacks/releases/latest/download/ibm-gse-eda-quarkus.v0.4.1.templates.default.tar.gz
+  - id: kafka
+    url: https://github.com/ibm-cloud-architecture/appsody-stacks/releases/latest/download/ibm-gse-eda-quarkus.v0.4.1.templates.kafka.tar.gz
+  requirements:
+    appsody-version: '>= 0.6.0'
+  image: dev.local/appsody/ibm-gse-eda-quarkus:0.4.1

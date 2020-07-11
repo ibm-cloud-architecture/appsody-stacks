@@ -6,7 +6,7 @@ language: java
 maintainers:
   - name: jerome boyer
     email: boyerje@us.ibm.com
-    githuo-id: jbcodeforce
+    githuo-id: ibm-cloud-architecture 
 default-template: kafka
 requirements:
    appsody-version: ">= 0.6.0"
