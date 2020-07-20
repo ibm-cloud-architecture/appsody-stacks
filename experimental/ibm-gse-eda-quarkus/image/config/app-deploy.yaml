@@ -22,10 +22,10 @@ spec:
           key: binding
           name: es-cp4i-apikey
           optional: true
-    - name: TRUSTSTORE_ENABLED
+    - name: SSL_ENABLED
       value: "true"
     - name: CERT_LOCATION
-      value: /deployments/es-cert.jks
+      value: /deployments/truststore.jks
     livenessProbe:
       failureThreshold: 12
       httpGet:

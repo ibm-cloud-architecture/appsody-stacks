@@ -24,12 +24,13 @@ This template provides a Java application which demonstrates using MicroProfile 
 
 ## Getting Started
 
+1. Add ibmcase repository with `appsody repo add `
 1. Create a new folder in your local directory and initialize it using the Appsody CLI, e.g.:
 
     ```bash
     mkdir my-project
     cd my-project
-    appsody init ibm-gse-eda-quarkus
+    appsody init ibmcase/ibm-gse-eda-quarkus
     ```
     This will initialize a Quarkus project using the default template.
 
@@ -55,6 +56,7 @@ This template provides a Java application which demonstrates using MicroProfile 
 You can also edit `/src/main/java/org/acme/quickstart/GreetingResource.java` and save, the REST API will be live-reloaded on the next invocation.
 
 ## Building a Production Image
+
 Running `appsody build` will create a production image that typically boots in under 10ms. Quarkus achieves this fast boot time by using ahead of time compilation of Java into a native executable using [GraalVM](https://www.graalvm.org/). The `appsody build` process can take around 5 minutes due to the amount of time required to build a native executable.
 
 To try this, run:

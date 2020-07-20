@@ -40,7 +40,7 @@ ENV JAVA_OPTIONS="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jb
 
 COPY  --from=build /project/user-app/target/lib/* /deployments/lib/
 COPY --from=build /project/user-app/target/*-runner.jar /deployments/app.jar
-# COPY --from=build /project/user-app/certs/es-cert.jks /deployments/es-cert.jks 
+#COPY --from=build /project/user-app/certs/server.truststore /deployments/server.truststore 
 
 EXPOSE 8080
 USER 1001
