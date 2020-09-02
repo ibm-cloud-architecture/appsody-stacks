@@ -1,6 +1,6 @@
 name: IBM_GSE_EDA_Quarkus
-version: 0.4.1
-description: Quarkus 1.5.3 runtime for running Java applications
+version: 1.7.1
+description: Quarkus 1.7.1 runtime for running Java applications, kafka 2.5, Event Streams 10
 license: Apache-2.0
 language: java
 maintainers:

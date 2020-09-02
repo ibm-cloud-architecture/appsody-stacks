@@ -1,5 +1,5 @@
 ## Stage 1 : build with maven builder image jvm capabilities
-FROM quay.io/quarkus/centos-quarkus-maven:19.3.1-java11 AS build
+FROM quay.io/quarkus/centos-quarkus-maven:20.1.0-java11 AS build
 
 COPY . /project
 RUN cd /project && mvn -B install dependency:go-offline -DskipTests

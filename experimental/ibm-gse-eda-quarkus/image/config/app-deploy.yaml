@@ -16,32 +16,48 @@ spec:
         configMapKeyRef:
           key: brokers
           name: kafka-brokers
-    - name: KAFKA_APIKEY
+    - name: KAFKA_USER
+      valueFrom:
+        configMapKeyRef:
+          key: user
+          name: kafka-brokers
+    - name: KAFKA_PASSWORD
       valueFrom:
         secretKeyRef:
-          key: binding
-          name: es-cp4i-apikey
-          optional: true
-    - name: SSL_ENABLED
-      value: "true"
-    - name: CERT_LOCATION
-      value: /deployments/truststore.jks
-    livenessProbe:
-      failureThreshold: 12
-      httpGet:
-        path: /health/live
-        port: 8080
-      initialDelaySeconds: 5
-      periodSeconds: 2
-    readinessProbe:
-      failureThreshold: 12
-      httpGet:
-        path: /health/ready
-        port: 8080
-      initialDelaySeconds: 5
-      periodSeconds: 2
-      timeoutSeconds: 1
+          key: password
+          name: es-user-secret
+    - name: KAFKA_CERT_PATH
+      value: /deployments/certs/ca.p12
+    - name: KAFKA_CERT_PWD
+      valueFrom:
+        secretKeyRef:
+          key: ca.password
+          name: es-cluster-ca-cert
+  livenessProbe:
+    failureThreshold: 12
+    httpGet:
+      path: /health/live
+      port: 8080
+    initialDelaySeconds: 5
+    periodSeconds: 2
+  readinessProbe:
+    failureThreshold: 12
+    httpGet:
+      path: /health/ready
+      port: 8080
+    initialDelaySeconds: 5
+    periodSeconds: 2
+    timeoutSeconds: 1
   monitoring:
     labels:
       k8s-app: APPSODY_PROJECT_NAME
   expose: true
+  volumeMounts:
+  - mountPath: /deployments/certs/ca.p12
+    name: es-cert
+    readOnly: true
+    subPath: ca.p12
+  volumes:
+  - name: es-cert
+    secret:
+      secretName: es-cluster-ca-cert

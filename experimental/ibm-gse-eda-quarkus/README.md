@@ -1,14 +1,14 @@
 # Quarkus Stack
 
-The Quarkus stack is designed to provide a foundation for building and running Java applications on Quarkus with Appsody using kafka for reactive messaing backbone.
+The Quarkus stack is designed to provide a foundation for building and running Java applications on Quarkus with Appsody using kafka for reactive messaging backbone.
 
-This stack is based on the `Quarkus 1.5.2.Final` runtime. It allows you to develop new or existing Java applications that run on Quarkus and can be turned into a native executable for a low memory footprint and near instantaneous (< 10ms) start times.
+This stack is based on the `Quarkus 1.7.1.Final` runtime. It allows you to develop new or existing Java applications that run on Quarkus and can be turned into a native executable for a low memory footprint and near instantaneous (< 10ms) start times.
 
 ## What is Quarkus?
 
-See: https://quarkus.io/
+See: [https://quarkus.io/](https://quarkus.io/)
 
-> Kubernetes Native Java stack tailored for GraalVM & OpenJDK HotSpot, crafted from the best of breed Java libraries and standards
+Kubernetes Native Java stack tailored for GraalVM & OpenJDK HotSpot, crafted from the best of breed Java libraries and standards
 
 ## Templates
 
